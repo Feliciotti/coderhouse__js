@@ -1,5 +1,6 @@
-$('#btn').on('click', function(){
-    alert('No sea pendejo');
+let btn = document.getElementById('btn')
+btn.addEventListener("click", function(){
+    alert("No sea pendejo")
 })
 
 class Deuda {
@@ -38,19 +39,12 @@ deudores.push(new Deuda("Anita", 13500, 10));
 
 
 for (const deudor of deudores){
-    $('div').append(`
+    let cntnt = document.createElement("div");
+    cntnt.innerHTML = `
         <p> ${deudor.nombre} su deuda de ${deudor.monto}$ ha sido refinanciada en ${deudor.cuotas}CTAS de ${deudor.valorCTAS().toFixed(2)}$</p>
-        `)
+        `
+        document.body.appendChild(cntnt);
 }
-
-
-//for (const deudor of deudores){
-   // let cntnt = document.createElement("div");
-    //cntnt.innerHTML = `
-      //  <p> ${deudor.nombre} su deuda de ${deudor.monto}$ ha sido refinanciada en ${deudor.cuotas}CTAS de ${deudor.valorCTAS().toFixed(2)}$</p>
-        //`
-        //document.body.appendChild(cntnt);
-//}
 
 localStorage.setItem('Deudores', deudores);
 
