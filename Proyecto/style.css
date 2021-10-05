@@ -1,0 +1,43 @@
+body {
+    background-color: #FFEEDA;
+}
+
+#GIF {
+    display: none;
+}
+
+h1, h2, p{
+    text-align: center;
+    color: #4D3F2F;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 17px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    margin: auto;
+}
+
+#btn{
+    background-color: #FFEAD2;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #FFB174;
+}

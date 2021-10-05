@@ -1,6 +1,17 @@
-$('#btn').on('click', function(){
-    alert('No sea pendejo');
-})
+$("body").append(` <div class="btnContainer">
+                <button id="btn">Toque aquí para no abonar</button>
+                </div> `);
+
+$("body").append(`<div>
+                <br>
+                <img id="GIF" src="https://64.media.tumblr.com/3f1453fa3346a5244e50604dc88adf6d/tumblr_nfxe3ktqrR1rwl09fo3_400.gifv" alt="No vuelva a hacer eso">
+                </div>
+                `);
+
+
+$("#btn").click(() => { 
+    $("#GIF").toggle("slow");
+});
 
 class Deuda {
     constructor(nombre, monto, cuotas) {
@@ -38,19 +49,10 @@ deudores.push(new Deuda("Anita", 13500, 10));
 
 
 for (const deudor of deudores){
-    $('div').append(`
+    $('.deudores').append(`
         <p> ${deudor.nombre} su deuda de ${deudor.monto}$ ha sido refinanciada en ${deudor.cuotas}CTAS de ${deudor.valorCTAS().toFixed(2)}$</p>
         `)
 }
-
-
-//for (const deudor of deudores){
-   // let cntnt = document.createElement("div");
-    //cntnt.innerHTML = `
-      //  <p> ${deudor.nombre} su deuda de ${deudor.monto}$ ha sido refinanciada en ${deudor.cuotas}CTAS de ${deudor.valorCTAS().toFixed(2)}$</p>
-        //`
-        //document.body.appendChild(cntnt);
-//}
 
 localStorage.setItem('Deudores', deudores);
 
